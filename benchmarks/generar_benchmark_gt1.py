@@ -32,8 +32,8 @@ def ejecutar_benchmark():
     print(" * CPU/NPU: Intel Core Ultra 9 185H (16 Cores / 22 Threads) | Engine Nativo DVTRGAS-30")
     print("===========================================================================\n")
 
-    sistema = SistemaIntegradoIAGROK()
-    razonador = RazonamientoSistema2()
+    sistema: Any = SistemaIntegradoIAGROK()
+    razonador: Any = RazonamientoSistema2()
 
     num_pruebas = 30
     latencias = []
