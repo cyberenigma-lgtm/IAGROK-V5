@@ -73,6 +73,19 @@ python benchmarks/generar_benchmark_gt1.py
 
 ---
 
+## 🎯 Staff AI Systems Architect — Interview Prep Masterclass (Multilingual)
+
+Prepare for high-level Staff/Principal AI Engineering technical interviews with our multi-language Q&A masterclass covering edge SIMD acceleration, TypeSafe AI (Jev) comparison, multi-agent concurrency, and IP protection:
+
+- 🇬🇧 [**English Masterclass Guide**](docs/interview_guide/INTERVIEW_GUIDE_EN.md)
+- 🇪🇸 [**Guía de Entrevista en Español**](docs/interview_guide/INTERVIEW_GUIDE_ES.md)
+- 🇨🇳 [**中文技术面试指南**](docs/interview_guide/INTERVIEW_GUIDE_ZH.md)
+- 🇵🇹 [**Guia de Entrevista em Português**](docs/interview_guide/INTERVIEW_GUIDE_PT.md)
+- 🇯🇵 [**日本語面接対策ガイド**](docs/interview_guide/INTERVIEW_GUIDE_JA.md)
+- 🇰🇷 [**한국어 면접 대비 가이드**](docs/interview_guide/INTERVIEW_GUIDE_KO.md)
+
+---
+
 ## 🛡️ Intellectual Property & Security Statement
 
 This repository contains the **Public Open-Architecture Distribution** of IAGROK V5. 
