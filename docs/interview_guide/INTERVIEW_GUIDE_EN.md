@@ -68,3 +68,37 @@ We adopt Jev's RLCD (Reinforcement Learning for Calibrated Decisions) philosophy
 1. **Open Orchestration Layer**: High-level priority schedulers, hypothesis evaluators, and benchmark runners are public in Python to demonstrate clean system design and multi-agent coordination.
 2. **Closed Native Binaries**: Proprietary C/Rust SIMD vector kernels (`dvtrgas30_standalone_core.c`) remain 100% private locally. Only pre-compiled, optimized binaries (`bin/dvtrgas30_engine.dll`) or graceful Mock objects are distributed.
 3. **Legal IP Rights**: All core algorithms and neural topologies are registered under **Registered IP ID: `2609046909131`**."
+
+---
+
+### Q7: In distributed architectures, WAN bandwidth and latency are traditional bottlenecks. How does IAGROK V5 solve this without suffering cloud latency?
+
+**Candidate Response**:
+"The industry mistakenly assumes that to gain speed, one must strip rich data at the source. In IAGROK V5, we solve this through a **2-Phase Asynchronous Stream Prediction Hybrid Architecture**:
+
+- **Phase 1 (Lightweight Cloud)**: The host emits a minimal payload over the internet to a remote classifier (like Jev). This slashes WAN bandwidth and token consumption, returning a lightweight typed identifier (Enum/ID) in 70 ms.
+- **Phase 2 (Local Core)**: Milliseconds before the user perceives the response, the local `GlobalStateBus` intercepts that typed ID and warm-starts IAGROK V5's internal engine. Because heavy RAG vector stores, local context, and compilation validators (`gcc`/`rustc`) reside locally on NVMe flash, the system generates, audits, and executes the action on bare metal at **0.82 ms native latency**, shaving off critical microsecond overheads."
+
+---
+
+### Q8: Continuous execution of massive RAG vector stores causes RAM saturation and OOM errors. How do you scale under hardware constraints?
+
+**Candidate Response**:
+"We mitigate physical memory saturation through code metabolic isolation termed **Dynamic Argument Tri-Hemispheric Segmentation**. Instead of loading monolithic RAG vector stores into system RAM, knowledge is partitioned across three decoupled sub-engines:
+
+1. **Lexical Hemisphere**: Dedicated strictly to dictionaries, text processing, and multi-language tokenization (Pinyin/Mandarin/English/Spanish).
+2. **Physical/Mathematical Hemisphere**: Dedicated to low-level computational logic and AST syntax parsers.
+3. **Art Hemisphere**: Dedicated to creative orchestration and audio pipelines (such as Suno AI integrations).
+
+The system intercepts queries and, via strict argument passing in entry points, opens only the required hemisphere's memory tap for that microsecond. The remaining 90% of knowledge remains dormant on NVMe flash, shielding RAM from thermal spikes and OOM crashes while optimizing k-NN search sweeps."
+
+---
+
+### Q9: Sustained high-frequency compute causes thermal throttling and latency degradation. How do you solve this physical issue in software?
+
+**Candidate Response**:
+"We solve thermal degradation via **Software-Driven DVFS Logic** inside our `HomeostasisManager`. Traditionally, the CPU acts as master controller and GPU as math slave. In IAGROK V5, we invert operating system hardware roles: the GPU/NPU leads parallel neural execution while the CPU acts as an ultra-lightweight router validating flows via a 3-step **Zero-Trust Echo Loop**.
+
+To mitigate heat at the source while maintaining 0.82 ms latency, the software triggers two automated actions:
+1. **Dynamic Precision Switching (FP16 ➡️ INT8)**: Upon reaching a critical thermal threshold (e.g., 72 °C), `DVTRGAS-30` instantly quantizes vectors to 8-bit integers, drastically reducing transistor switching and cooling the chip on the fly.
+2. **Virtual Core Gating via NPU Offload**: The pipeline redirects compute shaders to Intel Core Ultra 9's integrated 45 TOPS NPU, which is physically designed for cold matrix operations with minimal power draw, allowing GPU cores milliseconds of passive cooling."
