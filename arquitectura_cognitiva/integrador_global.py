@@ -23,12 +23,12 @@ if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
 try:
-    from arquitectura_cognitiva.dvtrgas30_wrapper import dvtrgas30
+    from arquitectura_cognitiva.dvtrgas30_wrapper import dvtrgas30 # type: ignore
 except ImportError:
     try:
-        from dvtrgas30_wrapper import dvtrgas30
+        from dvtrgas30_wrapper import dvtrgas30 # type: ignore
     except ImportError:
-        from .dvtrgas30_wrapper import dvtrgas30
+        from .dvtrgas30_wrapper import dvtrgas30 # type: ignore
 
 class GlobalStateBus:
     def __init__(self):
