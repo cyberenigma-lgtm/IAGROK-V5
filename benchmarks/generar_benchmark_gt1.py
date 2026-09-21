@@ -18,9 +18,9 @@ if BASE_DIR not in sys.path:
     sys.path.insert(0, BASE_DIR)
 
 try:
-    from arquitectura_cognitiva.dvtrgas30_wrapper import dvtrgas30
-    from arquitectura_cognitiva.integrador_global import SistemaIntegradoIAGROK
-    from arquitectura_cognitiva.razonamiento_sistema2 import RazonamientoSistema2
+    from arquitectura_cognitiva.dvtrgas30_wrapper import dvtrgas30 # type: ignore
+    from arquitectura_cognitiva.integrador_global import SistemaIntegradoIAGROK # type: ignore
+    from arquitectura_cognitiva.razonamiento_sistema2 import RazonamientoSistema2 # type: ignore
 except ImportError:
     from dvtrgas30_wrapper import dvtrgas30 # type: ignore
     from integrador_global import SistemaIntegradoIAGROK # type: ignore
